@@ -256,6 +256,12 @@ function SummaryTab({ onPickCompany }) {
   return (
     <div>
       <section className="hero">
+        <img
+          className="tab-motif"
+          src="./assets/illustrations/leaf-large.png"
+          alt=""
+          aria-hidden="true"
+        />
         <div className="eyebrow">Evidence base · Phase 1</div>
         <h1 className="display hero-title">Regenerative Programme Review</h1>
         <p className="body-lg hero-sub">
@@ -449,6 +455,12 @@ function ExplorerTab() {
 
   return (
     <div>
+      <img
+        className="tab-motif"
+        src="./assets/illustrations/hoverfly.png"
+        alt=""
+        aria-hidden="true"
+      />
       <div className="eyebrow section-eyebrow">Requirement explorer</div>
       <p className="body-sm" style={{ marginTop: 0, maxWidth: 720 }}>
         Search, filter and inspect every extracted requirement. Source-gap leads are kept visible
@@ -565,6 +577,12 @@ function CompanyTab({ selected, setSelected }) {
   if (!selected || !company) {
     return (
       <div>
+        <img
+          className="tab-motif"
+          src="./assets/illustrations/walnut.png"
+          alt=""
+          aria-hidden="true"
+        />
         <div className="eyebrow section-eyebrow">Company deep dives</div>
         <p className="body-sm" style={{ marginTop: 0, maxWidth: 720 }}>
           Select a provider to see a briefing-note profile, its regenerative position and supply-chain
@@ -801,6 +819,12 @@ function SourceTab() {
 
   return (
     <div>
+      <img
+        className="tab-motif"
+        src="./assets/illustrations/skylark-feather.png"
+        alt=""
+        aria-hidden="true"
+      />
       <div className="eyebrow section-eyebrow">Source gaps &amp; evidence</div>
       <p className="body-sm" style={{ marginTop: 0, maxWidth: 760 }}>
         The evidence base is held to source discipline. The matrix does not carry a discrete
@@ -921,6 +945,12 @@ export default function App() {
       <header className="topbar">
         <div className="container topbar-inner">
           <div className="brand">
+            <img
+              className="brand-mark-img"
+              src="./assets/logos/brandmark-seed-of-life.svg"
+              alt=""
+              aria-hidden="true"
+            />
             <span className="brand-name">Bramble</span>
             <span className="brand-sep">/</span>
             <span className="brand-sub eyebrow">Regenerative Programme Review</span>
@@ -1004,11 +1034,17 @@ const CSS = `
 /* top bar / nav */
 .topbar{background:var(--bg); border-bottom:1px solid var(--rule); position:sticky; top:0; z-index:20;}
 .topbar-inner{display:flex; align-items:center; padding-top:var(--space-5); padding-bottom:var(--space-4);}
-.brand{display:flex; align-items:baseline; gap:var(--space-3);}
+.brand{display:flex; align-items:center; gap:var(--space-3);}
 .brand-mark{font-size:18px; color:var(--bramble-evergreen);}
+.brand-mark-img{height:26px; width:auto; color:var(--bramble-evergreen); flex:0 0 auto;}
 .brand-name{font-weight:600; font-size:18px; color:var(--bramble-evergreen); letter-spacing:0.04em;}
 .brand-sep{color:var(--rule-strong);}
 .brand-sub{color:var(--fg-2);}
+
+/* per-tab motif illustration, sits to the right of section heading */
+.tab-motif{float:right; width:120px; height:auto; margin:0 0 var(--space-4) var(--space-5);
+  opacity:0.92; shape-outside:margin-box;}
+@media (max-width:720px){ .tab-motif{width:84px;} }
 .nav-inner{display:flex; gap:var(--space-6);}
 .nav-item{background:none; border:0; border-bottom:2px solid transparent; cursor:pointer;
   font-family:inherit; font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
