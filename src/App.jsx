@@ -1061,9 +1061,9 @@ const CSS = `
 .heat{border-collapse:collapse; width:100%; font-size:13px;}
 .heat th, .heat td{border:1px solid var(--rule); text-align:center;}
 .heat-corner{background:var(--bg-tint);}
-.heat-col{background:var(--bg-tint); height:120px; padding:var(--space-2); vertical-align:bottom;}
-.heat-col span{writing-mode:vertical-rl; transform:rotate(180deg); white-space:nowrap; font-weight:600;
-  text-transform:uppercase; letter-spacing:0.06em; font-size:11px; color:var(--fg-display); display:inline-block;}
+.heat-col{background:var(--bg-tint); padding:var(--space-3) var(--space-2); vertical-align:bottom; max-width:96px;}
+.heat-col span{font-weight:600; text-transform:uppercase; letter-spacing:0.06em; font-size:10px;
+  line-height:1.3; color:var(--fg-display); display:block; text-align:center; word-break:normal; overflow-wrap:break-word;}
 .heat-rowlab{background:var(--bg-tint); text-align:left; padding:var(--space-3) var(--space-4); font-weight:600;
   white-space:nowrap; cursor:pointer; color:var(--fg-display);}
 .heat-rowlab:hover{color:var(--bramble-claret); text-decoration:underline;}
